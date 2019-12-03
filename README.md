@@ -61,3 +61,7 @@ node ../testStart.js
 ##### - creates $MEM/graphs
 ##### - $MEM/graphs folder rsyncs to $NODE "graphs" folder 
 `graph.sh [Y-AXIS]`
+
+
+
+I :heart: SiaPrime Coin (SCP): f2e15fc822761f083db8376ea3b151d6f398abc951ee102b40a20839eeaf531a6b432535b5f6
