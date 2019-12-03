@@ -2,10 +2,18 @@
 R Graph displayed in a Node.js Express Web-UI
 
 
+- [x] clone to $HOME directory and install requirements
+```
+cd ~/
+git clone https://github.com/EvilRedHorse/node-R-graph.git
+cd node-R-graph
+npm install express shelljs
+```
 
-- [x] start redis-server
 
-`redis-server`
+- [x] start redis-server instance on alternate port 6380
+
+`redis-server --port 6380`
 
 
 - [x] customize folders in config.json
@@ -22,6 +30,12 @@ R Graph displayed in a Node.js Express Web-UI
 
 `crontab -l | { cat; echo "0 * * * * ~/node-R-Graph/test/scripts/ALL-json.sh"; } | crontab -`
 
+- [x] start node instance on port 3030
+
+```
+cd test
+node ../testStart.js
+```
 
 ##### EDIT CRONTAB: crontab -e # then while in vim press the insert key to start typing, add the intervals (0 * * * * is hourly) , data granularity can be decreased by setting crontab to daily (0 0 * * *), add programs (sia-host-info.sh & All-json.sh) to load, leave an extra carriage return at the end, then press the esc key, type :qw and press the enter key to exit. You can google vim or man vim and/or change your editing env for crontab to your favourite editor.
 
