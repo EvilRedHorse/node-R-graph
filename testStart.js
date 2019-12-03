@@ -9,7 +9,7 @@ const shell = require('shelljs')
 
 var all = function() {
   // do something
-  shell.exec('test/scripts/graph.sh');
+  shell.exec('scripts/graph.sh');
 };
 router.post('/', function(req,res) {
   // regraph all - sending a response does not pause the function
@@ -25,7 +25,7 @@ yaxis = [ 'transactionfeeexpenses', 'maxrevisebatchsize', 'successfulreads', 'ma
 yaxis.forEach(function(value){
 
   var refresh = function() { 
-    shell.exec('test/scripts/graph.sh ' + value);
+    shell.exec('scripts/graph.sh ' + value);
   };
   router.post('/' + value, function(req,res) {
     // regraph one - sending a response does not pause the function

@@ -15,8 +15,8 @@
 
     "DATA": {
         "MEM": "/dev/shm",
-        "NODE": "test/",
-        "SCRIPTS": "test/scripts",
+        "NODE": ".",
+        "SCRIPTS": "scripts",
         "MATRIX": "/home/smc/Public/json"
     }
 }

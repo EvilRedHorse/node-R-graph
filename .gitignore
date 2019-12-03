@@ -1,2 +1,2 @@
-graphs/*.svg
+test/graphs/*.svg
 git.sh

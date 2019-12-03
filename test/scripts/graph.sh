@@ -6,7 +6,7 @@
 # Requires: inkscape rsync parallel jq
 
 # declare script and data locations
-CONFIG=test/scripts/config.json
+CONFIG=scripts/config.json
 
 MEM=$( cat $CONFIG | jq -r .DATA.MEM )
 NODE=$( cat $CONFIG | jq -r .DATA.NODE )
@@ -43,7 +43,8 @@ parallel --eta inkscape -z $MEM/graphs/graph-{}.ps --export-plain-svg=$MEM/graph
 parallel --eta rm $MEM/graphs/graph-{}.ps ::: ${array[*]}
 
 # rsync status & graph svg to $NODE/graphs folder
-rsync -urpv --progress $MATRIX/status-*.svg $NODE/graphs/ && rsync -urpvz --progress $MEM/graphs $NODE
+rsync -urpv --progress $MATRIX/status-*.svg $NODE/graphs/
+rsync -urpvz --progress $MEM/graphs $NODE
 
 
 
