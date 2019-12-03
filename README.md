@@ -5,6 +5,7 @@ R Graph displayed in a Node.js Express Web-UI
 - [x] clone to $HOME directory and install requirements
 ```
 cd ~/
+sudo dnf -y install jq parallel inkscape rsync redis R
 git clone https://github.com/EvilRedHorse/node-R-graph.git
 cd node-R-graph
 npm install express shelljs
