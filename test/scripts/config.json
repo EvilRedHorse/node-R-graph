@@ -1,0 +1,22 @@
+{
+    "ENABLED": "true",
+    "HOST": "localhost:9980",
+
+    "TOOLS": {
+	"CURL": "curl -s --compressed --limit-rate 1M --connect-timeout 5  --compressed --limit-rate 1M --connect-timeout 5"
+    },
+
+    "REMOTE": {
+        "USERNAME": "",
+        "PASS": "",
+        "ADDRESS": "192.168.1.51",
+        "FOLDER": "/Public"
+    },
+
+    "DATA": {
+        "MEM": "/dev/shm",
+        "NODE": "test/",
+        "SCRIPTS": "test/scripts",
+        "MATRIX": "/home/smc/Public/json"
+    }
+}
