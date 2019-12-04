@@ -48,7 +48,7 @@ plotXY <- function(time, value){
     plot_title <- ""
     # margin size vector c(bottom, left, top, right) in lines. default = c(5, 4, 4, 2) + 0.1
 #    par(mar=c(12, 25, 4, 6) + 0.2)
-    par(mar=c(5, 4, 4, 2) + 0.1)
+    par(mar=c(5, 4, 4, 4) + 0.1)
     xlabel <- ""
     ylabel <- ""
     label_colour <- "black"

@@ -12,14 +12,13 @@ set -o errexit
 # define RAM
 MEM=/dev/shm
 mkdir -p $MEM/json
+
 # redis-server port
 REDIS=6380
 
 #YAXIS="$1"
-#INTERVALS="$2"
+#XINTERVALS="$2"
 
-# nanoseconds since the epoch, 1970-01-01 00:00:00 UTC
-# readonly SIA_HOST_JSON_DATE=$( date +"%s%N" )
 # seconds since the epoch, 1970-01-01 00:00:00 UTC
 SIA_HOST_JSON_DATE=$( date +"%s" )
 
