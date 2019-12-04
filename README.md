@@ -5,6 +5,7 @@ R Graph displayed in a Node.js Express Web-UI
 - [x] clone to $HOME directory and install requirements
 ```
 cd ~/
+sudo dnf -y install jq parallel inkscape rsync redis R
 git clone https://github.com/EvilRedHorse/node-R-graph.git
 cd node-R-graph
 npm install express shelljs
@@ -61,3 +62,7 @@ node ../testStart.js
 ##### - creates $MEM/graphs
 ##### - $MEM/graphs folder rsyncs to $NODE "graphs" folder 
 `graph.sh [Y-AXIS]`
+
+
+
+I :heart: SiaPrime Coin (SCP): `f2e15fc822761f083db8376ea3b151d6f398abc951ee102b40a20839eeaf531a6b432535b5f6`
