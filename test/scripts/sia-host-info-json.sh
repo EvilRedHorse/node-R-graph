@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 # Author: Stefan Crawford
 # Description: Take timestamped host information from redis to json
 
@@ -10,14 +10,17 @@
 set -o errexit
 
 # define RAM
-readonly MEM=/dev/shm
-readonly BACKUP=/home/smc/Documents
+MEM=/dev/shm
+mkdir -p $MEM/json
+# redis-server port
+REDIS=6380
 
-YAXIS="$1"
+#YAXIS="$1"
+#INTERVALS="$2"
 
 # nanoseconds since the epoch, 1970-01-01 00:00:00 UTC
-readonly SIA_HOST_JSON_DATE=$( date +"%s%N" )
+# readonly SIA_HOST_JSON_DATE=$( date +"%s%N" )
+# seconds since the epoch, 1970-01-01 00:00:00 UTC
+SIA_HOST_JSON_DATE=$( date +"%s" )
 
-printf "[ [""$( redis-cli --csv LRANGE SIA_HOST_DATE 0 -1 )""], [""$( redis-cli --csv LRANGE $YAXIS 0 -1 )""] ]" | jq -cM '.' > $MEM/matrix-$1.json
-
-rsync -pAv --append --progress --no-whole-file $MEM/matrix-$1.json $BACKUP 
+printf "[ [""$( redis-cli -p $REDIS --csv LRANGE SIA_HOST_DATE 0 $2 )""], [""$( redis-cli -p $REDIS --csv LRANGE $1 0 $2 )""] ]" | jq -c '.' > $MEM/json/matrix-$1.json
