@@ -65,4 +65,4 @@ node ../testStart.js
 
 
 
-I :heart: SiaPrime Coin (SCP): `f2e15fc822761f083db8376ea3b151d6f398abc951ee102b40a20839eeaf531a6b432535b5f6`
+I :heart: SCPrime Coin (SCP): `6cfd86289a72abad79d177ce20257d39d4a93397d9626bc5cb6efd82b2ab7fec4993f36019fb`
