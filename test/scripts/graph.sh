@@ -3,7 +3,7 @@
 # Title: convert ps to svg
 # Author: Stefan Crawford
 
-# Requires: inkscape rsync parallel jq
+# Requires: inkscape rsync parallel jq R R-jsonlite
 
 # declare script and data locations
 CONFIG=scripts/config.json
